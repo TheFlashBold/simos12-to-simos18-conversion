@@ -256,7 +256,7 @@ Final output:
 First 16 hex chars = Read passwords: `39a9485b 5b3f95b5`
 Last 16 hex chars = Write passwords: `d6419bd3 ddc97f92`
 
-These are permanent — burned into OTP during manufacturing.
+These are permanent, burned into OTP during manufacturing.
 
 ---
 
@@ -268,7 +268,7 @@ These are permanent — burned into OTP during manufacturing.
 (BSL) flashinfo
 ```
 
-Check that "Flash Locked Error" shows DISABLED. If still ENABLED, try swapping the password byte order. Power cycle the ECU (12V off, wait 5 seconds) after every 2-3 failed attempts — the flash controller locks out on too many wrong passwords.
+Check that "Flash Locked Error" shows DISABLED. If still ENABLED, your CRC_DELAY may be wrong.
 
 ```
 (BSL) dumpmem AF000000 18000 PMU0_DFlash.bin
@@ -277,7 +277,7 @@ Check that "Flash Locked Error" shows DISABLED. If still ENABLED, try swapping t
 (BSL) dumpmem 80800000 100000 PMU1_PFlash.bin
 ```
 
-Back these up immediately. This is your only recovery path.
+Back these up.
 
 ---
 
@@ -327,10 +327,7 @@ You should see your part number, software version, and `State Of Flash Memory: 0
 
 The ECU will have the donor vehicle's VIN. This causes a gateway DTC for VIN mismatch and is TÜV-relevant.
 
-The VIN is stored in encrypted DFlash — you can't hex-edit it. Options:
-- ODIS Online Coding at a dealer or shop with ODIS access
-- UDS Write DID 0xF190 in programming session with security access
-
+The VIN is stored in encrypted DFlash — you can't hex-edit it.
 The VIN mismatch doesn't prevent the engine from starting with immo-off.
 
 ---
