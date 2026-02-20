@@ -33,12 +33,16 @@ This guide was done with an 8V0906264D.
 
 You have to open the ECU and solder a few connections. Refer to the images in [bri3d/TC1791_CAN_BSL](https://github.com/bri3d/TC1791_CAN_BSL):
 
+![Board1](Board1.jpg)
 **Board1.jpg:** Connect red → 1kΩ resistor → black + yellow.
 
+![Board3](Board3.jpg)
 **Board3.jpg:** Connect turquoise and white.
 
+![Board2](Board2.jpg)
 **Board2.jpg:** Wire directly to Pi GPIO 27.
 
+![RST](RST.jpg)
 **RST.jpg:** Wire directly to Pi GPIO 22.
 
 3V3 for the level shifter LV side comes from the Pi's 3.3V pin.
@@ -57,6 +61,9 @@ The HWCFG pullup wires on the PCB can come loose — if you get no CAN response 
 | Pin 6/50/86 | 12V+ | Bench power supply |
 
 ESP32 GND, Pi GND, CAN HAT G pin, ECU GND, level shifter GND, and 12V supply GND all need to be tied together. Missing CAN ground was a major issue during this build — without a shared ground reference, CAN communication drops out intermittently or completely.
+
+![desk](desk.jpeg)
+Your desk may look like that.
 
 ---
 
