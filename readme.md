@@ -212,15 +212,12 @@ Pin assignments differ from the original because of CAN HAT conflicts:
 - Reset: GPIO **22** (original was 23)
 - BOOT_CFG: GPIO **27** (original was 24)
 
-The `sboot_pwm()` and `cancel_pwm()` functions should do nothing since the ESP32 handles PWM:
+The `sboot_pwm()` function should do nothing since the ESP32 handles PWM:
 
 ```python
 def sboot_pwm():
     print("PWM handled by ESP32 (external)")
-    return True
-
-def cancel_pwm():
-    pass
+    return type('', (), {'cancel': lambda self: None})()
 ```
 
 Set `CRC_DELAY = 0.001` — the Pi 5 is faster than the Pi 3B+ and the default 0.0005 is too short. If the CRC value comes back as 0x0, the delay is too small. If the CRC address jumps multiple iterations past the target, the delay is too large. You want exactly one iteration (start_address + 0x100).
