@@ -12,6 +12,8 @@ The Simos 18.1 has better tuning tool support, more boost control options, and a
 
 If you don't have access to ODIS Engineering, you need an immo-off patched binary since the replacement ECU is married to a different vehicle.
 
+I used 8V0906264H__0003 as its the best supported version for the europe CJSA.
+
 The following part numbers are listed in the VW_Flash update matrix for the 1.8T:
 8V0906264A, 8V0906264D, 8V0906264F, 8V0906264K, 8V0906264L, 8V0906264M.
 This guide was done with an 8V0906264D.
