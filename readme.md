@@ -11,6 +11,7 @@ Audi A3 8V, European market, EA888 Gen 3 1.8 TFSI, engine code CJSA. Original EC
 The Simos 18.1 has better tuning tool support, more boost control options, and a large community around patches and calibration. bri3d's open-source toolchain (TC1791_CAN_BSL, Simos18_SBOOT, VW_Flash) enables full bench read/write without commercial tools. The Simos 18.1 is a direct plug & play swap for the 12.1 on EA888 Gen 3 — same connector, same sensors, no wiring changes.
 
 If you don't have access to ODIS Engineering, you need an immo-off patched binary since the replacement ECU is married to a different vehicle.
+You can patch it with my [Tune Editor](https://github.com/TheFlashBold/tune-editor) or [Bin Toolz](https://github.com/Switchleg1/BinToolz) by Switchleg1.
 
 I used 8V0906264H__0003 as its the best supported version for the europe CJSA.
 
@@ -279,6 +280,8 @@ Back these up.
 ---
 
 ## Flash Immo-Off Binary
+
+You can patch it with my [Tune Editor](https://github.com/TheFlashBold/tune-editor) or [Bin Toolz](https://github.com/Switchleg1/BinToolz) by Switchleg1.
 
 ### Erase ASW3 and Reset into CBOOT
 
