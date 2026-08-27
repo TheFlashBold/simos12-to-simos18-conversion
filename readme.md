@@ -103,6 +103,7 @@ git clone https://github.com/bri3d/VW_Flash
 
 ```bash
 cd ~/Simos18_SBOOT
+sudo apt install libgmp-dev libgomp1
 gcc twister.c -o twister -O3 -march=native -fopenmp -lgmp
 ```
 
@@ -112,6 +113,7 @@ You may need to install `libgmp-dev` and `libgomp1` if they're not already prese
 
 ```bash
 cd ~/TC1791_CAN_BSL
+uv venv
 uv pip install python-can tqdm udsoncan==1.21 "can-isotp<2.0" lz4
 ```
 
