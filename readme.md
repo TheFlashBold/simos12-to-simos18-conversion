@@ -310,7 +310,7 @@ uv run VW_Flash.py --action flash_unlock --frf FL_8V0906259H__0001.frf
 ```bash
 uv run VW_Flash.py --action flash_bin \
   --input_bin ./8V0906264H__0003_immo_off.bin \
-  --patch_cboot
+  --patch-cboot
 ```
 
 `--patch_cboot` patches the Customer Bootloader to accept modified software blocks.
